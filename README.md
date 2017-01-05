@@ -34,3 +34,8 @@ Created the empty repo for the project and put it on GitHub. \#progress
 In addition to creating an empty Scala project, I also added test data. This data is the html from all of the recipe 
 urls that I exported from my yummly account. The raw html has been checked in but if you want to use your own, use the 
 GenerateHtml application to generate your own.
+
+### 01/04/2017
+Started to write some actual Scala code that is turned into JavaScript. I followed steps 0-3 of the [basic tutorial
+on the Scala-JS site](http://www.scala-js.org/tutorial/basic/). Step 4 had to do with user input and this application
+will not be doing that so I stopped there. There are more steps but I'll save them for another day...
