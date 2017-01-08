@@ -1,7 +1,7 @@
 package com.schwartz.scraper
 
 import org.scalajs.dom
-import dom.document
+import dom.{Node, document}
 
 import scala.scalajs.js.JSApp
 
@@ -16,7 +16,11 @@ object Scraper extends JSApp {
     appendPar(document.body, "Hello World")
   }
 
-  def appendPar(targetNode: dom.Node, text: String): Unit = {
+  def isRecipe(body: String): Boolean = {
+    body.contains("http://schema.org/Recipe")
+  }
+
+  def appendPar(targetNode: Node, text: String): Unit = {
     val parNode = document.createElement("p")
     val textNode = document.createTextNode(text)
     parNode.appendChild(textNode)
