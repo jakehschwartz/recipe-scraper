@@ -39,3 +39,11 @@ GenerateHtml application to generate your own.
 Started to write some actual Scala code that is turned into JavaScript. I followed steps 0-3 of the [basic tutorial
 on the Scala-JS site](http://www.scala-js.org/tutorial/basic/). Step 4 had to do with user input and this application
 will not be doing that so I stopped there. There are more steps but I'll save them for another day...
+
+### 01/05/2017
+I looked through the rest of the tutorial but most of it did not seem relevant to the project, except for the last step
+which sets up a launcher so that the executable can change but the html does not have to. This was very simple to set
+up, just another line in the build.sbt and changes to the index.html file.
+
+### 01/08/2017
+I struggled all weekend to get some unit testable code because the code can either run on the Scala.js engine or it can run on the JVM, but not both. I chose for it to run on the JVM because then it would allow me to read files. In the future, the part of the code that use JS will just have to be tested in a different way.
