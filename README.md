@@ -46,4 +46,11 @@ which sets up a launcher so that the executable can change but the html does not
 up, just another line in the build.sbt and changes to the index.html file.
 
 ### 01/08/2017
-I struggled all weekend to get some unit testable code because the code can either run on the Scala.js engine or it can run on the JVM, but not both. I chose for it to run on the JVM because then it would allow me to read files. In the future, the part of the code that use JS will just have to be tested in a different way.
+I struggled all weekend to get some unit testable code because the code can either run on the Scala.js engine or it can 
+run on the JVM, but not both. I chose for it to run on the JVM because then it would allow me to read files. In the 
+future, the part of the code that use JS will just have to be tested in a different way.
+
+### 01/09/2017
+Small addition today, just made the Scraper object print to the console if the recipe. This is just a set up for the
+rest of the week where I will turning it into a bookmarklet to be run on demand on any site. I also changed the tests a
+because I learned about the runtimeDOM, which I talked about in the [Set Up](#Set Up) section above.
