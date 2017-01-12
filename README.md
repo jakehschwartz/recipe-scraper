@@ -54,3 +54,10 @@ future, the part of the code that use JS will just have to be tested in a differ
 Small addition today, just made the Scraper object print to the console if the recipe. This is just a set up for the
 rest of the week where I will turning it into a bookmarklet to be run on demand on any site. I also changed the tests a
 because I learned about the runtimeDOM, which I talked about in the [Set Up](#Set Up) section above.
+
+### 01/11/2017
+No actual code the past two days, I instead spent the time making some design decisions. I mostly went back and forth
+between having the project be a bookmarklet vs. a browser extension. In the end, I stuck with my gut and will press on
+with making a bookmarklet. The deciding factor was that I do not want to try to support multiple versions for the 
+different browsers. I also learned about a technique to externalize the bookmarklet, which I think will work well. I'll
+talk about that more when that is done...
