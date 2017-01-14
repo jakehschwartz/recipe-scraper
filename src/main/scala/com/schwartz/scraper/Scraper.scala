@@ -1,7 +1,7 @@
 package com.schwartz.scraper
 
 import org.scalajs.dom
-import dom.{Node, document}
+import org.scalajs.dom.raw.Element
 
 import scala.scalajs.js.JSApp
 
@@ -13,12 +13,24 @@ import scala.scalajs.js.JSApp
   */
 object Scraper extends JSApp {
   def main(): Unit = {
-    if (isRecipe(document.body.toString)) {
+    if (isRecipe(dom.document.body.innerHTML)) {
       notify("Hooray! This looks like a recipe!!!")
     } else notify("This is not a recipe :(")
   }
 
+  def isRecipe(elem: Element): Boolean = {
+    if (elem.innerHTML.contains("http://schema.org/Recipe")) {
+      true
+    } else {
+      val children = elem.children
+      if (children.length == 0) {
+        false
+      } else (0 until children.length) map children.item exists(x => isRecipe(x))
+    }
+  }
+
   def isRecipe(str: String): Boolean = {
+    println(str)
     str.contains("http://schema.org/Recipe")
   }
 

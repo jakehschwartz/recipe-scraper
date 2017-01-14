@@ -67,3 +67,7 @@ Using some of the code from [this tutorial](https://code.tutsplus.com/tutorials/
 I was able to set up the project as a bookmarklet. It was a very simple change, just had to create a link that
 runs the javascript. This link can then be dragged into the bookmark bar. To see the link, go to 
 [the project page](https://jakehschwartz.github.io/recipe-scraper)
+
+### 01/14/2017
+When testing the bookmarklet I created yesterday, I found an issue with my function to determine if there was a recipe.
+I expected `document.body.toString` to give me the raw html, but it did not.
