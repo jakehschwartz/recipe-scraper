@@ -2,14 +2,17 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sample Page</title>
+    <title>Recipe Scraper</title>
 </head>
 <body>
-<!-- Include JavaScript dependencies -->
-<script type="text/javascript" src="./scripts/recipe-scraper-jsdeps.js"></script>
-<!-- Include Scala.js compiled code -->
-<script type="text/javascript" src="./scripts/recipe-scraper-opt.js"></script>
-<!-- Run main object -->
-<script type="text/javascript" src="./scripts/recipe-scraper-launcher.js"></script>
+<a href="javascript: (function () {
+    var code = document.createElement('script');
+    code.setAttribute('src', 'http://jakehschwartz.github.io/recipe-scraper/scripts/scraper.js');
+    document.body.appendChild(code);
+
+    var execute = document.createElement('script');
+    execute.setAttribute('src', 'http://jakehschwartz.github.io/recipe-scraper/scripts/launcher.js');
+    document.body.appendChild(execute);
+ }());">Drag me to your bookmark bar!</a>
 </body>
 </html>
