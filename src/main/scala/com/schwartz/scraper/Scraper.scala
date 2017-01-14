@@ -19,7 +19,7 @@ object Scraper extends JSApp {
     } else notify(document.body, "This is not a recipe :(")
   }
 
-  def isRecipe(node: Node): Boolean = isRecipe(node.toString)
+  def isRecipe(node: Node): Boolean = isRecipe(node.nodeValue)
 
   def isRecipe(str: String): Boolean = {
     str.contains("http://schema.org/Recipe")
