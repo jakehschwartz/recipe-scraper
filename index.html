@@ -9,10 +9,12 @@
 <a href="javascript: (function () {
     var code = document.createElement('script');
     code.setAttribute('src', 'https://jakehschwartz.github.io/recipe-scraper/scripts/scraper.js');
+    code.setAttribute('type', 'text/javascript')
     document.body.appendChild(code);
 
     var execute = document.createElement('script');
     execute.setAttribute('src', 'https://jakehschwartz.github.io/recipe-scraper/scripts/launcher.js');
+    code.setAttribute('type', 'text/javascript')
     document.body.appendChild(execute);
  }());">Scraper</a>
 </body>
