@@ -13,6 +13,7 @@ import scala.scalajs.js.JSApp
   */
 object Scraper extends JSApp {
   def main(): Unit = {
+    println(document.body.toString)
     if (isRecipe(document.body)) {
       notify(document.body, "Hooray! This looks like a recipe!!!")
     } else notify(document.body, "This is not a recipe :(")
