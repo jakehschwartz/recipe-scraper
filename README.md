@@ -70,4 +70,5 @@ runs the javascript. This link can then be dragged into the bookmark bar. To see
 
 ### 01/14/2017
 When testing the bookmarklet I created yesterday, I found an issue with my function to determine if there was a recipe.
-I expected `document.body.toString` to give me the raw html, but it did not.
+I expected `document.body.toString` to give me the raw html, but it did not. I had to switch to 
+`document.body.innerHTML`.
