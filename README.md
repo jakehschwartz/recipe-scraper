@@ -61,3 +61,9 @@ between having the project be a bookmarklet vs. a browser extension. In the end,
 with making a bookmarklet. The deciding factor was that I do not want to try to support multiple versions for the 
 different browsers. I also learned about a technique to externalize the bookmarklet, which I think will work well. I'll
 talk about that more when that is done...
+
+### 01/13/2017
+Using some of the code from [this tutorial](https://code.tutsplus.com/tutorials/create-bookmarklets-the-right-way--net-18154),
+I was able to set up the project as a bookmarklet. It was a very simple change, just had to create a link that
+runs the javascript. This link can then be dragged into the bookmark bar. To see the link, go to 
+[the project page](https://jakehschwartz.github.io/recipe-scraper)

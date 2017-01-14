@@ -13,19 +13,16 @@ import scala.scalajs.js.JSApp
   */
 object Scraper extends JSApp {
   def main(): Unit = {
-    println(document.body.toString)
-    if (isRecipe(document.body)) {
-      notify(document.body, "Hooray! This looks like a recipe!!!")
-    } else notify(document.body, "This is not a recipe :(")
+    if (isRecipe(document.body.toString)) {
+      notify("Hooray! This looks like a recipe!!!")
+    } else notify("This is not a recipe :(")
   }
-
-  def isRecipe(node: Node): Boolean = isRecipe(node.nodeValue)
 
   def isRecipe(str: String): Boolean = {
     str.contains("http://schema.org/Recipe")
   }
 
-  def notify(targetNode: Node, text: String): Unit = {
-    println(text)
+  def notify(text: String): Unit = {
+    dom.window.alert(text)
   }
 }
