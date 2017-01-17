@@ -72,3 +72,8 @@ runs the javascript. This link can then be dragged into the bookmark bar. To see
 When testing the bookmarklet I created yesterday, I found an issue with my function to determine if there was a recipe.
 I expected `document.body.toString` to give me the raw html, but it did not. I had to switch to 
 `document.body.innerHTML`.
+
+### 01/16/2017
+Today, I modified the `isRecipe` to look at the individual elements instead of the html as a string. Because I was able to 
+do this, I should be able to parse the entire recipe out of then html. That is my goal for this week and it probably will
+take most of the week to accomplish.
