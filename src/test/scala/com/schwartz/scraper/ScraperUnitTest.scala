@@ -2,6 +2,7 @@ package com.schwartz.scraper
 
 import java.io.File
 
+import org.scalajs.dom.raw.DOMParser
 import org.scalatest.{Matchers, WordSpec}
 
 import scala.io.Source
@@ -11,10 +12,13 @@ import scala.io.Source
   */
 class ScraperUnitTest extends WordSpec with Matchers {
 
+  val parser = new DOMParser
+
   "isRecipe" should {
     "fail for a non recipe html page" in {
       val html = Source.fromResource("no-recipe.html").getLines().mkString
-      Scraper.isRecipe(html) should be(false)
+      val doc = parser.parseFromString(html, "text/html")
+      Scraper.isRecipe(doc.documentElement) should be(false)
     }
 
     "work for the recipes" in {
@@ -22,7 +26,8 @@ class ScraperUnitTest extends WordSpec with Matchers {
       val failed = dir.listFiles().flatMap { f =>
         val name = f.getName
         val html = Source.fromFile(f).getLines().mkString("")
-        if(!Scraper.isRecipe(html)) {
+        val doc = parser.parseFromString(html, "text/html")
+        if(!Scraper.isRecipe(doc.documentElement)) {
           Some(name)
         } else None
       }

@@ -13,7 +13,7 @@ import scala.scalajs.js.JSApp
   */
 object Scraper extends JSApp {
   def main(): Unit = {
-    if (isRecipe(dom.document.body.innerHTML)) {
+    if (isRecipe(dom.document.body)) {
       notify("Hooray! This looks like a recipe!!!")
     } else notify("This is not a recipe :(")
   }
@@ -27,11 +27,6 @@ object Scraper extends JSApp {
         false
       } else (0 until children.length) map children.item exists(x => isRecipe(x))
     }
-  }
-
-  def isRecipe(str: String): Boolean = {
-    println(str)
-    str.contains("http://schema.org/Recipe")
   }
 
   def notify(text: String): Unit = {
