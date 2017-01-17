@@ -19,7 +19,7 @@ object Scraper extends JSApp {
   }
 
   def isRecipe(elem: Element): Boolean = {
-    if (elem.innerHTML.contains("http://schema.org/Recipe")) {
+    if (elem.hasAttribute("itemtype") && elem.getAttribute("itemtype") == "http://schema.org/Recipe") {
       true
     } else {
       val children = elem.children
