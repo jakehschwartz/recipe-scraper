@@ -77,3 +77,7 @@ I expected `document.body.toString` to give me the raw html, but it did not. I h
 Today, I modified the `isRecipe` to look at the individual elements instead of the html as a string. Because I was able to 
 do this, I should be able to parse the entire recipe out of then html. That is my goal for this week and it probably will
 take most of the week to accomplish.
+
+### 01/17/2017
+In an effort to fix the tests, I switched frameworks from ScalaTest to [utest](https://github.com/lihaoyi/utest). The
+tests still don't work because scala.js does not know how to read files, but that is for another day...

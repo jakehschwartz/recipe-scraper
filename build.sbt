@@ -8,10 +8,11 @@ enablePlugins(ScalaJSPlugin)
 
 libraryDependencies ++= Seq(
   "org.scala-js" %%% "scalajs-dom" % "0.9.1",
-  "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
-  "org.scalatest" %% "scalatest" % "3.0.1" % "test"
+  "com.lihaoyi" %%% "utest" % "0.4.5" % "test"
 )
 
 jsDependencies += RuntimeDOM
+
+testFrameworks += new TestFramework("utest.runner.Framework")
 
 persistLauncher := true
