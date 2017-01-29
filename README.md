@@ -81,3 +81,11 @@ take most of the week to accomplish.
 ### 01/17/2017
 In an effort to fix the tests, I switched frameworks from ScalaTest to [utest](https://github.com/lihaoyi/utest). The
 tests still don't work because scala.js does not know how to read files, but that is for another day...
+
+### 01/29/2017
+I haven't had a change to work on this for a solid amount of time for the past 2 weeks, but it gave me time to think
+about how I wanted to implement the final pieces and wrap the project up. I decided to leave it open ended so I could
+come back to it later with another project. Because websites can use whatever part(s) of the schema they want, it would
+be hard to come up with a concrete data model. So instead, I just look for any and all properties in recipe html and
+construct json out of it and call it a day. Later on, I may go back and choose specific properties that I want, but that
+will require more analysis, which will be easier to do when I create the backend.
