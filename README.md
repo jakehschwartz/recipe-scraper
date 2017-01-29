@@ -1,6 +1,7 @@
 # recipe-scraper
 
-ScalaJS project to scrape page for recipes #1ppm
+ScalaJS project to scrape page for recipes #1ppm. Check out 
+[the project page](https://jakehschwartz.github.io/recipe-scraper) to try the bookmarklet for yourself
 
 ## Goal
 To have something that can run in the browser (as a bookmarklet or maybe an extension), that will extract recipe 
@@ -15,9 +16,6 @@ usually written in JavaScript but because I do not know JavaScript, nor do I wis
 I will use my Scala knowledge and use the ScalaJS transpiler to generate JS code. This will not only allow me to
 complete the project in the month timeframe, but will allow me to test-drive ScalaJS and assess it for potential future
 front end work.
-
-## Set Up
-???
 
 ## Log
 
