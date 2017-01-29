@@ -3,6 +3,9 @@
 ScalaJS project to scrape page for recipes #1ppm. Check out 
 [the project page](https://jakehschwartz.github.io/recipe-scraper) to try the bookmarklet for yourself
 
+_As of right now, this is nothing more than a proof of concept. Keep checking back for potential 'productionazation'
+progress_
+
 ## Goal
 To have something that can run in the browser (as a bookmarklet or maybe an extension), that will extract recipe 
 information from the DOM according [schema.org's recipe guidelines](https://schema.org/Recipe). From there, it will 
